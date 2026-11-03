@@ -1,0 +1,26 @@
+name: test
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Syntax check
+        run: |
+          node --check lib/index.js
+          node --check lib/client.js
+      - name: Host half
+        run: node test/host.test.mjs
+      - name: Client half
+        run: node test/client.test.mjs
+      - name: Index is valid JSON
+        run: node -e "JSON.parse(require('fs').readFileSync('market/index.json','utf8')); console.log('index.json parses')"

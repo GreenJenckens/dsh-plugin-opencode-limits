@@ -1,0 +1,22 @@
+# dependencies
+node_modules/
+.pnpm-store/
+
+# logs and local state
+*.log
+npm-debug.log*
+.DS_Store
+Thumbs.db
+
+# credentials and local configuration — never commit these
+.credentials.yaml
+.env
+.env.*
+!.env.example
+*.key
+*.pem
+
+# editor / tooling
+.idea/
+.vscode/
+.plugin-market-cache/

@@ -1,0 +1,63 @@
+{
+  "name": "dsh-plugin-opencode-limits",
+  "version": "0.1.0",
+  "description": "Remaining OpenCode Go subscription quota as a native stat pill in the DeepSeek Harness composer dock.",
+  "type": "module",
+  "main": "lib/index.js",
+  "exports": {
+    ".": "./lib/index.js",
+    "./client": "./lib/client.js",
+    "./cordis.patch.yml": "./cordis.patch.yml",
+    "./package.json": "./package.json"
+  },
+  "dsh": {
+    "manifestVersion": 1,
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "platform": "web",
+      "inject": [
+        "@deepseek-ai/dsh-client-ui-renderer",
+        "@deepseek-ai/dsh-client-ui-layout",
+        "@deepseek-ai/dsh-client-ui-conversation",
+        "@deepseek-ai/dsh-client-ui-chat"
+      ]
+    }
+  },
+  "engines": {
+    "node": ">=20",
+    "dsh": ">=0.2.1-rc.3"
+  },
+  "keywords": [
+    "dsh",
+    "dsh-plugin",
+    "deepseek-harness",
+    "opencode",
+    "opencode-go",
+    "usage",
+    "quota",
+    "limits",
+    "composer"
+  ],
+  "files": [
+    "lib/index.js",
+    "lib/client.js",
+    "cordis.patch.yml",
+    "docs/dock.png",
+    "CHANGELOG.md"
+  ],
+  "scripts": {
+    "test": "node test/host.test.mjs && node test/client.test.mjs"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/GreenJenckens/dsh-plugin-opencode-limits.git"
+  },
+  "homepage": "https://github.com/GreenJenckens/dsh-plugin-opencode-limits#readme",
+  "bugs": {
+    "url": "https://github.com/GreenJenckens/dsh-plugin-opencode-limits/issues"
+  },
+  "author": "GreenJenckens",
+  "license": "MIT"
+}

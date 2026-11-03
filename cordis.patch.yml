@@ -1,0 +1,9 @@
+# Row for the OpenCode limits plugin. The host half polls the OpenCode Go
+# usage endpoint and serves one JSON route; the client half draws the strip in
+# the shell's bottom slot. Nothing else in the profile changes.
+- insert:
+    - id: opencode-limits
+      name: 'dsh-plugin-opencode-limits'
+      config:
+        refreshMs: 20000
+        keyEnv: OPENCODE_GO_API_KEY
