@@ -1,0 +1,66 @@
+{
+  "format": 1,
+  "title": {
+    "en": "OpenCode limits",
+    "ru": "Лимиты OpenCode"
+  },
+  "description": {
+    "en": "DeepSeek Harness plugins that surface OpenCode subscription quota.",
+    "ru": "Плагины DeepSeek Harness, показывающие остатки подписки OpenCode."
+  },
+  "metadata": {
+    "categories": {
+      "usage": {
+        "title": {
+          "en": "Usage and limits",
+          "ru": "Лимиты и расход"
+        }
+      }
+    }
+  },
+  "plugins": [
+    {
+      "name": "dsh-plugin-opencode-limits",
+      "title": {
+        "en": "OpenCode Go limits",
+        "ru": "Лимиты OpenCode Go"
+      },
+      "description": {
+        "en": "Remaining OpenCode Go quota (5-hour, weekly, monthly windows) as a native stat pill in the composer dock, with ring indicators, reset tooltips and click-to-refresh.",
+        "ru": "Остатки подписки OpenCode Go (5-часовое, недельное и месячное окна) как родная плашка в строке статистики композера: кольца, подсказки со временем сброса, обновление по клику."
+      },
+      "icon": "icons/limits.svg",
+      "author": "GreenJenckens",
+      "homepage": "https://github.com/GreenJenckens/dsh-plugin-opencode-limits#readme",
+      "repository": {
+        "url": "https://github.com/GreenJenckens/dsh-plugin-opencode-limits"
+      },
+      "metadata": {
+        "category": "usage",
+        "keywords": [
+          "opencode",
+          "opencode-go",
+          "limits",
+          "quota",
+          "usage",
+          "composer",
+          "dock"
+        ]
+      },
+      "versions": [
+        {
+          "version": "0.1.0",
+          "publishTimestamp": 1793743153,
+          "source": {
+            "type": "git",
+            "url": "https://github.com/GreenJenckens/dsh-plugin-opencode-limits",
+            "commit": "e59f3a0468708d36e0974043e73b5646e796c558"
+          },
+          "engines": {
+            "dsh": ">=0.2.1-rc.3"
+          }
+        }
+      ]
+    }
+  ]
+}
