@@ -3,9 +3,12 @@
 Remaining **OpenCode Go** subscription quota, rendered as a native stat pill in DeepSeek Harness —
 in the composer dock, next to the harness's own steps, decode speed, token total and cache hit.
 
-> `⏱ 7 шагов · 275 действий · 167 ток./с   💾 86.9M ток. · Кэш 97%   OpenCode ◔ 5ч 87% · ◔ нед 83% · ◔ мес 92%   ◔ 46%`
+![The limits pill inside the DeepSeek Harness composer](docs/hero.png)
 
-![The limits pill in the composer dock](docs/dock.png)
+The pill itself, up close — `OpenCode` followed by one ring per window (5 hours, weekly, monthly),
+the arc showing how much of that window is still available:
+
+![Close-up of the limits pill](docs/pill.png)
 
 ## What it shows
 

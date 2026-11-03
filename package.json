@@ -44,7 +44,8 @@
     "lib/index.js",
     "lib/client.js",
     "cordis.patch.yml",
-    "docs/dock.png",
+    "docs/hero.png",
+    "docs/pill.png",
     "CHANGELOG.md"
   ],
   "scripts": {
