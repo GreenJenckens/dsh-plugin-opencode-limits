@@ -138,6 +138,16 @@ is picked up on the fly.
 * If OpenCode changes the response of `/v1/usage`, the pill reports «нет данных (…)» instead of failing
   the interface.
 
+## Releasing a new version
+
+1. Bump `version` in `package.json` and add a `CHANGELOG.md` entry.
+2. Commit, tag `vX.Y.Z`, push the branch and the tag.
+3. Add the tag's commit to `market/index.json` (`versions[]`, `publishTimestamp` = commit time, and
+   `"source": { "type": "npm" }` once the package is on npm), validate it with
+   `@deepseek-ai/dsh-plugin-market-index`, then push.
+4. `npm publish --access public` when a registry token is available; the market keeps working from the
+   Git source in the meantime.
+
 ## License
 
 MIT — see [LICENSE](LICENSE).
